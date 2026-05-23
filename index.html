@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Triage Medis Interaktif</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Kuesioner Triage Medis</h1>
+        <div id="question"></div>
+        <div class="buttons">
+            <button id="yesButton">YA</button>
+            <button id="noButton" class="no">TIDAK</button>
+        </div>
+        <div id="result"></div>
+        <button id="resetButton">Mulai Ulang Triage</button>
+    </div>
+
+    <script>
+        // Supaya session_id bisa dibaca dari Flask ke JS
+        const session_id = "{{ session_id }}";
+    </script>
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
